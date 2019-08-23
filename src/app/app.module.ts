@@ -1,16 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ListTarefasComponent } from './list-tarefas/list-tarefas.component';
+import { PseudoFormComponent } from './pseudo-form/pseudo-form.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PseudoFormComponent,
+    ListTarefasComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    FormsModule,
+    RouterModule.forRoot([
+      { path: 'pseudo-form', component: PseudoFormComponent},
+      { path: 'list-tarefas', component: ListTarefasComponent },
+      { path: '', redirectTo: 'list-tarefas', pathMatch: 'full' }
+      
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

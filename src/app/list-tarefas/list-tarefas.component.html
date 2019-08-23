@@ -1,0 +1,43 @@
+<div class='card'>
+  <div class='card-header titulo'>
+    {{ pageTitle }}
+  </div>
+
+  <div class='card-body'>
+    <div class='table-responsive'>
+      <table class='table'>
+        <thead>
+          <tr>
+            <th>
+              <button class='btn btn-primary'>Ok</button>
+            </th>
+            <th>ID</th>
+            <th>Nome da Tarefa</th>
+            <th>Data de Pedido</th>
+            <th>Finalizada</th>
+            <th>Checar Tarefa</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr *ngFor='let tarefa of tarefas'>
+            <th>+</th>
+            <th>{{ tarefa.id }}</th>
+            <th>{{ tarefa.nome }}</th>
+            <th> {{ tarefa.data }}</th>
+            <th>{{ tarefa.check }}</th>
+            <th>
+              <input class="form-check-input" type="checkbox" id="check" name="check">
+              <label class="form-check-label" for="checkbox">
+                Confirmar
+              </label>
+            </th>
+          </tr>
+        </tbody>
+      </table>
+      <button class="btn btn-primary">Enviar</button>
+    </div>
+    
+  </div>
+
+</div>

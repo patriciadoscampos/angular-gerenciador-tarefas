@@ -1,0 +1,42 @@
+<h1 class="titulo">Cadastrar tarefa</h1>
+
+<div class="well">
+  <form #formTarefa="ngForm">
+    <div class="form-group">
+      <label for="nome" class="titulo">Tarefa:</label>
+      <input 
+        type="text"
+        class="form-control"
+        id="nome"
+        name="nome"
+        placeholder="Inserir Tarefa"
+        [(ngModel)]="tarefaNome"
+        #nome="ngModel"
+        required> 
+      
+    <div class="form-group text-center">
+      <button class="btn btn-primary" (click)="cadastrarTarefas()">Cadastrar</button>
+    </div>
+<!--       
+        <span class="btn btn-primary" 
+          aria-hidden="true">Voltar</span> 
+      </a>
+    </div>
+  </form>
+</div> -->
+
+<!-- <div class='card'>
+  <div class='card-header'>
+    {{ pageTitle }}
+  </div>
+
+<div class='card-body'>
+  <h1 class="titulo">Adicionar Tarefa</h1>
+  <label for="nomeTarefaInputText">Digite o nome da tarefa</label>
+  <input id="nomeTarefaInputText" type="text" 
+          placeholder="Digite o nome da tarefa" [(ngModel)]='adicionaTarefa' /><br>
+  <button class="botao-adiciona-tarefa">Adicionar Tarefa</button>
+  <button class="botao-voltar">Voltar</button>
+</div>
+
+{{adicionaTarefa}} -->
